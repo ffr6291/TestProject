@@ -13,7 +13,7 @@ public class Encode {
 		char[] letter = new char[text.length()];
 		for (int j = 0; j < text.length(); j++) {
 			letter[j] = text.charAt(j);
-			// System.out.print(letter[j]);
+// 		System.out.print(letter[j]);
 		}
 		System.out.println();
 
@@ -65,5 +65,5 @@ public class Encode {
 			System.out.print(letter[l]);
 		}
 	}
-	
+
 }

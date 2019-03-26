@@ -8,6 +8,8 @@ public class Point {
 	public int[] _topleft = new int[8];
 	private int xdelta;
 	private int ydelta;
+	private int _xcoordinate;
+	private int _ycoordinate;
 
 	public int[] point1() {
 
@@ -20,8 +22,9 @@ public class Point {
 //		System.out.print("TopLeft: X-Koordinate: ");
 //		_topleft[0] = sc.nextInt();
 //		System.out.print("TopLeft: Y-Koordinate: ");
-
+		
 //		_topleft[1] = sc.nextInt();
+		
 		System.out.print("TopLeft liegt auf den Koordinaten ");
 		System.out.print("[" + _topleft[0] + "|");
 		System.out.println(_topleft[1] + "]");
@@ -32,11 +35,11 @@ public class Point {
 		_topleft[7] = Integer.parseInt(ypoint2);
 
 		System.out.print("BotRight: X-Koordinate: ");
-		
+
 //		_topleft[6] = sc.nextInt();
 //		System.out.print("BotRight: Y-Koordinate: ");
 //		_topleft[7] = sc.nextInt();
-		
+
 		System.out.print("BotRight liegt auf den Koordinaten ");
 		System.out.print("[" + _topleft[6] + "|");
 		System.out.println(_topleft[7] + "]");
@@ -151,7 +154,6 @@ public class Point {
 			System.out.println("Es ist kein Würfel");
 		}
 		return dice;
-
 	}
 
 }

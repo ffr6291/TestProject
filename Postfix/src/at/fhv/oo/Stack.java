@@ -5,14 +5,13 @@ public class Stack {
     private int _sp = 0;
 
 
-    public Stack(int n) {
-        _stack = new int[n];
+    public Stack(int size) {
+        _stack = new int[size];
     }
 
     public void push(int value) {
         if (!isFull()) {
-            _stack[_sp] = value;
-            _sp++;
+            _stack[_sp++] = value;
         }
     }
 
