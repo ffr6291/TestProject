@@ -2,6 +2,8 @@ package at.fhv.oo;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Point {
 	public int[] _topleft = new int[8];
 	private int xdelta;
@@ -9,22 +11,32 @@ public class Point {
 
 	public int[] point1() {
 
-		Scanner sc = new Scanner(System.in);
+		String xpoint1 = JOptionPane.showInputDialog("TopLeft: X-Koordinate: ");
+		String ypoint1 = JOptionPane.showInputDialog("TopLeft: Y-Koordinate: ");
+		_topleft[0] = Integer.parseInt(xpoint1);
+		_topleft[1] = Integer.parseInt(ypoint1);
 
-		System.out.print("TopLeft: X-Koordinate: ");
-		_topleft[0] = sc.nextInt();
-		System.out.print("TopLeft: Y-Koordinate: ");
+//		Scanner sc = new Scanner(System.in);
+//		System.out.print("TopLeft: X-Koordinate: ");
+//		_topleft[0] = sc.nextInt();
+//		System.out.print("TopLeft: Y-Koordinate: ");
 
-		_topleft[1] = sc.nextInt();
+//		_topleft[1] = sc.nextInt();
 		System.out.print("TopLeft liegt auf den Koordinaten ");
 		System.out.print("[" + _topleft[0] + "|");
 		System.out.println(_topleft[1] + "]");
 
-		System.out.print("BotRight: X-Koordinate: ");
-		_topleft[6] = sc.nextInt();
-		System.out.print("BotRight: Y-Koordinate: ");
+		String xpoint2 = JOptionPane.showInputDialog("BotRight: X-Koordinate: ");
+		String ypoint2 = JOptionPane.showInputDialog("BotRight: Y-Koordinate: ");
+		_topleft[6] = Integer.parseInt(xpoint2);
+		_topleft[7] = Integer.parseInt(ypoint2);
 
-		_topleft[7] = sc.nextInt();
+		System.out.print("BotRight: X-Koordinate: ");
+		
+//		_topleft[6] = sc.nextInt();
+//		System.out.print("BotRight: Y-Koordinate: ");
+//		_topleft[7] = sc.nextInt();
+		
 		System.out.print("BotRight liegt auf den Koordinaten ");
 		System.out.print("[" + _topleft[6] + "|");
 		System.out.println(_topleft[7] + "]");
@@ -66,8 +78,7 @@ public class Point {
 	}
 
 	public void rotate(int value) {
-		System.out.println("Xdelta" + xdelta);
-		System.out.println("Ydelta" + ydelta);
+
 		if (value == 1) {
 			_topleft[0] = _topleft[0];
 			_topleft[1] = _topleft[1] + xdelta;
@@ -77,12 +88,18 @@ public class Point {
 			_topleft[5] = _topleft[1] - xdelta;
 			_topleft[6] = _topleft[0] + ydelta;
 			_topleft[7] = _topleft[1] - xdelta;
+			System.out.println();
+			System.out.println("Das gedrehte Rechteck liegt auf folgenden Punkten:");
 			for (int i = 0; i < _topleft.length; i++) {
-				System.out.println(_topleft[i]);
+				if (i % 2 == 0) {
+					System.out.print("[" + _topleft[i] + "|");
+				} else {
+					System.out.println(_topleft[i] + "]");
+				}
 			}
 		} else {
 			if (value == 2) {
-				_topleft[0] = _topleft[0]+xdelta;
+				_topleft[0] = _topleft[0] + xdelta;
 				_topleft[1] = _topleft[1] + xdelta;
 				_topleft[2] = _topleft[0] + ydelta;
 				_topleft[3] = _topleft[1];
@@ -134,7 +151,7 @@ public class Point {
 			System.out.println("Es ist kein Würfel");
 		}
 		return dice;
+
 	}
-	
 
 }
