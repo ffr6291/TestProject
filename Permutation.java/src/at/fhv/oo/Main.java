@@ -11,4 +11,6 @@ public class Main {
 		}
 		
 	}
+	Stack s = new Stack(5);
+	
 }
