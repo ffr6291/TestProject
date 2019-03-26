@@ -82,7 +82,7 @@ public class Point {
 			}
 		} else {
 			if (value == 2) {
-				_topleft[0] = _topleft[0];
+				_topleft[0] = _topleft[0]+xdelta;
 				_topleft[1] = _topleft[1] + xdelta;
 				_topleft[2] = _topleft[0] + ydelta;
 				_topleft[3] = _topleft[1];
@@ -135,5 +135,6 @@ public class Point {
 		}
 		return dice;
 	}
+	
 
 }
