@@ -17,7 +17,7 @@ public class Main {
 		s.push(4);
 		s.pop();
 		s.push(7);
-		
+				
 		System.out.println(s.isEmpty());
 		System.out.println(s.isFull());
 	
