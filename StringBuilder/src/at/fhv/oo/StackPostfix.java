@@ -1,8 +1,8 @@
 package at.fhv.oo;
 
-import javax.swing.JOptionPane;
-import java.util.Stack;
 
+import java.util.Stack; 
+  
 public class StackPostfix  
 { 
     // Method to evaluate value of a postfix expression 
@@ -50,11 +50,12 @@ public class StackPostfix
         } 
         return stack.pop();     
     } 
-// Driver program to test above functions 
+      
+    // Driver program to test above functions 
     public static void main(String[] args)  
     { 
-        String exp=JOptionPane.showInputDialog("Postfixnotation angeben:"); 
-        System.out.println(exp);
+        String exp="231*+9-"; 
         System.out.println("postfix evaluation: "+evaluatePostfix(exp)); 
     } 
 } 
+// Contributed by Sumit Ghosh 

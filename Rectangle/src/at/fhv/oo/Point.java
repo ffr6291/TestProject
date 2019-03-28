@@ -149,8 +149,10 @@ public class Point {
 		boolean dice = false;
 		if (xdelta == ydelta) {
 			dice = true;
+			System.out.println();
 			System.out.println("Es ist ein Würfel");
 		} else {
+			System.out.println();
 			System.out.println("Es ist kein Würfel");
 		}
 		return dice;
