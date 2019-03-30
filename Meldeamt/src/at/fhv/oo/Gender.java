@@ -1,5 +1,6 @@
 package at.fhv.oo;
 
-public class Gender {
-
+public enum Gender {
+	FEMALE,
+	MALE
 }
