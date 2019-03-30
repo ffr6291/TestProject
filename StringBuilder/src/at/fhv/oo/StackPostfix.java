@@ -1,7 +1,4 @@
 package at.fhv.oo;
-
-
-import java.util.Stack; 
   
 public class StackPostfix  
 { 
@@ -9,7 +6,7 @@ public class StackPostfix
     static int evaluatePostfix(String exp) 
     { 
         //create a stack 
-        Stack<Integer> stack=new Stack<>(); 
+        Stack stack=new Stack(10); 
           
         // Scan all characters one by one 
         for(int i=0;i<exp.length();i++) 

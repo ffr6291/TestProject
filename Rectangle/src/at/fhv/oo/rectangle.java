@@ -6,7 +6,7 @@ public class rectangle {
 		Point square = new Point();
 
 		square.point1();
-		square.shift(1, 9);
+		//square.shift(1, 9);
 
 		String point = JOptionPane.showInputDialog("Um welchen Punkt soll gedreht werden? (TopLeft = 1; TopRight = 2; BotLeft = 3; BotRight= 4;)");
 		square.rotate((Integer.parseInt(point)));
