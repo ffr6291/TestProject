@@ -7,6 +7,14 @@ public class Main {
 	Person Maria = new Person("Maria", "Franz", LocalDateTime.now());
 	Person Fabian = new Person("Fabian", "Franz", LocalDateTime.now());
 	
+	Fabian.setGender("Male");
+	Maria.setGender("Male");
+	Fabian.Marriage(Maria, Fabian);
+	
+	
+	
+	
+	
 	
 	
 	

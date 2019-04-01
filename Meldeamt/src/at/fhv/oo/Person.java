@@ -21,10 +21,26 @@ public class Person {
 		_lname = lname;
 		
 		_birthday = now;	}
-	public String setGender (Person p1) {
-		Scanner sc = new Scanner(System.in);
-		_gender = sc.toString();
+	public void setGender (String gender) {
+		_gender = gender;
+		
+	}
+	public String getGender(){
 		return _gender;
 	}
+	public boolean Marriage(Person p1, Person p2) {
+		boolean marrypossible = true;
+
+		if (p1.getGender() != p2.getGender()) {
+			System.out.println("Heirat möglich");
+
+			return marrypossible;
+		} else {
+			marrypossible = false;
+			System.out.println("Homoehe nicht möglich");
+			return marrypossible;
+		}
+	}
+	
 
 }
