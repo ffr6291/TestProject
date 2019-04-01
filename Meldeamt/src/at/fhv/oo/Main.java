@@ -4,13 +4,13 @@ import java.time.LocalDateTime;
 
 public class Main {
 	public static void main(String[] args)  {
-	Person Maria = new Person("Maria", "Franz", LocalDateTime.now());
-	Person Fabian = new Person("Fabian", "Franz", LocalDateTime.now());
+	Person Frau = new Person("Test", "Musterfrau", LocalDateTime.now());
+	Person Mann = new Person("Mann", "Mustermann", LocalDateTime.now());
 	
-	Fabian.setGender("Male");
-	Maria.setGender("Male");
-	Fabian.Marriage(Maria, Fabian);
-	
+	Frau.setGender("Male");
+	Mann.setGender("Female");
+	Frau.Marriage(Frau, Mann);
+	//test
 	
 	
 	
