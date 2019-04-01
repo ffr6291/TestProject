@@ -11,17 +11,27 @@ public class Person {
 	private String _lname;
 	private String _maidenname;
 	private LocalDate _birthday;
-	private Gender _gender;
 	private Person _person;
 	
-	public void setPerson(String fname, String lname, LocalDate birthday, Gender gender) {
+	public void setfname(String fname)throws Exception {
 		_fname = fname;
-		_lname = lname;
-		_birthday = birthday;
-		_gender = gender;
+		if(_fname == null) {
+			throw new Exception("Halt dein Maul:");
+		}
+		else {
+			System.out.println(_fname);
+		}
 	}
-	public String getPeron() {
+	public String getfname() {
 		return _fname;
+	}
+	public void setlname(String lname	) {
+		_lname=lname;
+	}
+	public String getlname() {
+		return _lname;
+	
+		
 	}
 }
 	
