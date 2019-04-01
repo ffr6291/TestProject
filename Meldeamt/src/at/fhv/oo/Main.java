@@ -1,8 +1,20 @@
 package at.fhv.oo;
 
+import java.time.LocalDateTime;
+
 public class Main {
 	public static void main(String[] args)  {
-	Person Fabian = new Person();
+	Person Maria = new Person("Maria", "Franz", LocalDateTime.now());
+	Person Fabian = new Person("Fabian", "Franz", LocalDateTime.now());
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 		
 	}

@@ -1,41 +1,30 @@
 package at.fhv.oo;
 
+import java.util.Scanner;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
 public class Person {
-	
+
 	private String _fname;
 	private String _lname;
 	private String _maidenname;
-	private LocalDate _birthday;
+	private LocalDateTime _birthday;
 	private Person _person;
-	
-	public void setfname(String fname)throws Exception {
-		_fname = fname;
-		if(_fname == null) {
-			throw new Exception("Halt dein Maul:");
-		}
-		else {
-			System.out.println(_fname);
-		}
-	}
-	public String getfname() {
-		return _fname;
-	}
-	public void setlname(String lname	) {
-		_lname=lname;
-	}
-	public String getlname() {
-		return _lname;
-	
-		
-	}
-}
-	
-	
-	
-	
+	private String _gender;
 
+	public Person(String fname, String lname, LocalDateTime now) {
+		_fname = fname;
+		_lname = lname;
+		
+		_birthday = now;	}
+	public String setGender (Person p1) {
+		Scanner sc = new Scanner(System.in);
+		_gender = sc.toString();
+		return _gender;
+	}
+
+}
